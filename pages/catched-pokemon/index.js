@@ -8,7 +8,7 @@ export default function CatchedPokemons() {
   return (
     <div>
       {state.catchedPokemons.map((pokemon) => {
-        return <h1>{pokemon}</h1>;
+        return <h3>{pokemon}</h3>;
       })}
     </div>
   );
