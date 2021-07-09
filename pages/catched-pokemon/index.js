@@ -7,9 +7,13 @@ export default function CatchedPokemons() {
   console.log(state);
   return (
     <div>
-      {state.catchedPokemons.map((pokemon) => {
-        return <h3>{pokemon}</h3>;
-      })}
+      <ul>
+        {state.catchedPokemons.map((pokemon) => {
+          <li key={pokemon.area.url}>
+            <h3>{pokemon}</h3>;
+          </li>;
+        })}
+      </ul>
     </div>
   );
 }

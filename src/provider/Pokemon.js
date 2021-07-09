@@ -3,6 +3,7 @@ import { createContext, useContext, useReducer } from "react";
 const PokemonContext = createContext();
 const initialState = {
   catchedPokemons: [],
+  area: [],
 };
 
 const reducer = (state, action) => {
@@ -10,7 +11,11 @@ const reducer = (state, action) => {
     case "CATCH_POKEMON":
       return {
         ...state,
-        catchedPokemons: [...state.catchedPokemons, action.payload],
+        catchedPokemons: [
+          ...state.catchedPokemons,
+          ...state.area,
+          action.payload,
+        ],
       };
     default:
       throw new Error();
