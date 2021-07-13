@@ -14,7 +14,7 @@ export default function DetailAreas() {
     <div>
       <h1>{pokemon?.name}</h1>
       <ul>
-        {pokemonList?.map((pokemon, i) => (
+        {pokemonList?.map((pokemon) => (
           <li>
             <Link
               key={pokemon.pokemon.url}
